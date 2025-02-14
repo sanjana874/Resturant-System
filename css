@@ -1,0 +1,114 @@
+/* Apply a dark overlay to the background */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url('https://i.pinimg.com/736x/86/6c/d2/866cd2867f9f2b7e6e3594fb1b8230dd.jpg') no-repeat center center fixed;
+  background-size: cover;
+  position: relative;
+}
+
+/* Add a semi-transparent dark overlay */
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* Dark overlay */
+  z-index: -1;
+}
+
+/* Center the container */
+.container {
+  width: 50%;
+  background: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+/* Headings */
+h2 {
+  color: #222; 
+  font-size: 26px;
+  margin-bottom: 15px;
+  background: rgba(255, 255, 255, 0.7); /* Background behind text */
+  padding: 8px;
+  border-radius: 6px;
+  display: inline-block;
+}
+
+/* Form styles */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+}
+
+input {
+  width: 90%;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+/* Improve button styling */
+button {
+  width: 92%;
+  padding: 12px;
+  font-size: 16px;
+  background: #ff9800;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: 0.3s;
+  font-weight: bold;
+}
+
+button:hover {
+  background: #e68900;
+}
+
+/* Table styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: center;
+}
+
+th {
+  background-color: #ff9800;
+  color: white;
+  font-size: 18px;
+}
+
+td {
+  background: rgba(255, 255, 255, 0.9);
+  font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    width: 80%;
+  }
+}
